@@ -1,0 +1,12 @@
+﻿@model passionProject_storeTickets2022.Models.User
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this User?</h2>
+<a href="/User/List">Cancel</a>
+<h3>Name: @Model.UserFirstName @Model.UserLastName</h3>
+<form action="/User/Delete/@Model.UserId" method="POST">
+    <input type="submit" value="Confirm Delete" />
+</form>

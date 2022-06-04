@@ -1,0 +1,12 @@
+﻿@model passionProject_storeTickets2022.Models.Website
+@{
+    ViewBag.Title = "View";
+}
+
+<a href="/Website/List">Go back to list</a>
+<br />
+<a href="/Website/Edit/@Model.WebsiteId">Update</a>
+<br />
+<h3><strong>@Model.WebsiteName</strong></h3>
+<h3><strong>Website ID: </strong>@Model.WebsiteId</h3>
+<h4><strong>Website Type: </strong>@Model.WebsiteType</h4>

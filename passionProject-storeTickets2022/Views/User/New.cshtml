@@ -1,0 +1,34 @@
+﻿@model IEnumerable<passionProject_storeTickets2022.Models.User>
+@{
+    ViewBag.Title = "Create";
+}
+
+<a href="/User/List">Go back to list</a>
+<br />
+<h2>Create New User</h2>
+<br />
+<form action="/User/Create" method="POST">
+    <div>
+        <label>First Name:</label> <input type="text" name="UserFirstName" />
+    </div>
+    <div>
+        <label>Last Name:</label> <input type="text" name="UserLastName" />
+    </div>
+    <div>
+        <label>Account ID:</label> <input type="text" name="UserName" />
+    </div>
+    <div>
+        <label>Phone:</label> <input type="tel" name="PhoneNnumber" />
+    </div>
+    <div>
+        <label>Email:</label> <input type="email" name="EmailAddress" />
+    </div>
+    <div>
+        <label>Date of Birth:</label> <input type="date" name="BirthDate" />
+    </div>
+    <div>
+        <input type="submit" value="Add User" />
+    </div>
+</form>
+
+

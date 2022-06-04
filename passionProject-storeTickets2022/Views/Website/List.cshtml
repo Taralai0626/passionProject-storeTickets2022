@@ -1,0 +1,12 @@
+﻿@model IEnumerable<passionProject_storeTickets2022.Models.Website>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/Website/New">Add New Website</a>
+@foreach (var website in Model)
+{
+    <h3><a href="/Website/Details/@website.WebsiteId">@website.WebsiteName</a></h3>
+    <h4><strong>Website Type: </strong>@website.WebsiteType</h4>
+}

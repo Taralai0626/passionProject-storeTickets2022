@@ -1,0 +1,45 @@
+﻿@model IEnumerable<passionProject_storeTickets2022.Models.Website>
+@{
+    ViewBag.Title = "Create";
+}
+
+<a href="/Ticket/List">Go back to list</a>
+<br />
+<h2>Create New Ticket</h2>
+<br />
+<form action="/Ticket/Create" method="POST">
+    <div>
+        <label>Website:</label>
+        <select name="WebsiteId">
+            @foreach (var website in Model)
+            {
+                <option value="@website.WebsiteId">@website.WebsiteId  @website.WebsiteName</option>
+            }
+        </select>
+    </div>
+    <div>
+        <label>Event Name:</label> <input type="text" name="EventName" />
+    </div>
+    <div>
+        <label>Event Type:</label> <input type="text" name="EventType" />
+    </div>
+    <div>
+        <label>Venue:</label> <input type="text" name="EventVenue" />
+    </div>
+    <div>
+        <label>Location:</label> <input type="text" name="EventLocation" />
+    </div>
+    <div>
+        <label>Date:</label> <input type="date" name="EventDate" />
+    </div>
+    <div>
+        <label>Starting Price:</label> <input type="text" name="TicketStartingPrice" />
+    </div>
+    <div>
+        <input type="submit" value="Add Ticket" />
+    </div>
+</form>
+
+
+
+

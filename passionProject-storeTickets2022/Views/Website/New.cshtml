@@ -1,0 +1,23 @@
+﻿@model IEnumerable<passionProject_storeTickets2022.Models.Website>
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<a href="/Website/List">Go back to list</a>
+<br />
+<h2>Create New Website</h2>
+<br />
+<form action="/Website/Create" method="POST">
+    <div>
+        <label>Website Name:</label> <input type="text" name="WebsiteName" />
+    </div>
+    <div>
+        <label>Website Type:</label> <input type="text" name="WebsiteType" />
+    </div>
+    <div>
+        <input type="submit" value="Add Website" />
+    </div>
+</form>
+
+

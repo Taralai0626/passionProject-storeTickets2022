@@ -1,0 +1,22 @@
+﻿@model passionProject_storeTickets2022.Models.Website
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Website</h2>
+<form action="/Website/Update/@Model.WebsiteId" method="POST">
+    <div style="display:none;">
+        @* Pass through the Website ID *@
+        <input type="text" name="WebsiteId" value="@Model.WebsiteId" />
+    </div>
+    <div>
+        <label>Website Name:</label> <input type="text" name="WebsiteName" value="@Model.WebsiteName" />
+    </div>
+    <div>
+        <label>Website Type:</label> <input type="text" name="WebsiteType" value="@Model.WebsiteType" />
+    </div>
+    <div>
+        <input type="submit" value="Update Website" />
+    </div>
+</form>

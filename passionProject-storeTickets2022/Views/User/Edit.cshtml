@@ -1,0 +1,34 @@
+﻿@model passionProject_storeTickets2022.Models.User
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update User</h2>
+<form action="/User/Update/@Model.UserId" method="POST">
+    <div style="display:none;">
+        @* Pass through the User ID *@
+        <input type="text" name="UserID" value="@Model.UserId" />
+    </div>
+    <div>
+        <label>Name:</label> <input type="text" name="UserFirstName" value="@Model.UserFirstName" />
+    </div>
+    <div>
+        <label>Last Name:</label> <input type="text" name="UserLastName" value="@Model.UserLastName" />
+    </div>
+    <div>
+        <label>Account ID:</label> <input type="text" name="UserName" value="@Model.UserName"/>
+    </div>
+    <div>
+        <label>Phone:</label> <input type="tel" name="PhoneNnumber" value="@Model.PhoneNnumber" />
+    </div>
+    <div>
+        <label>Email:</label> <input type="email" name="EmailAddress" value="@Model.EmailAddress" />
+    </div>
+    <div>
+        <label>Date of Birth:</label> <input type="date" name="BirthDate" value="@Model.BirthDate" />
+    </div>
+    <div>
+        <input type="submit" value="Update User" />
+    </div>
+</form>

@@ -1,0 +1,43 @@
+﻿@model passionProject_storeTickets2022.Models.ViewModels.UpdateTicket
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Ticket</h2>
+<form action="/Ticket/Update/@Model.SelectedTicket.TicketId" method="POST">
+    <div style="display:none;">
+        @* Pass through the Ticket ID *@
+        <input type="text" name="TicketId" value="@Model.SelectedTicket.TicketId" />
+    </div>
+    <div>
+        <label>Event Name:</label> <input type="text" name="EventName" value="@Model.SelectedTicket.EventName" />
+    </div>
+    <div>
+        <label>Website:</label>
+        <select name="WebsiteId">
+            @foreach (var website in Model.WebsiteOptions)
+            {
+                <option value="@website.WebsiteId">@website.WebsiteId  @website.WebsiteName</option>
+            }
+        </select>
+    </div>
+    <div>
+        <label>Event Type:</label> <input type="text" name="EventType" value="@Model.SelectedTicket.EventType" />
+    </div>
+    <div>
+        <label>Venue:</label> <input type="text" name="EventVenue" value="@Model.SelectedTicket.EventVenue" />
+    </div>
+    <div>
+        <label>Location:</label> <input type="text" name="EventLocation" value="@Model.SelectedTicket.EventLocation" />
+    </div>
+    <div>
+        <label>Date:</label> <input type="text" name="EventDate" value="@Model.SelectedTicket.EventDate" />
+    </div>
+    <div>
+        <label>Starting Price:</label> <input type="text" name="TicketStartingPrice" value="@Model.SelectedTicket.TicketStartingPrice" />
+    </div>
+    <div>
+        <input type="submit" value="Update Ticket" />
+    </div>
+</form>

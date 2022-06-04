@@ -1,0 +1,20 @@
+﻿@model passionProject_storeTickets2022.Models.TicketDto
+@{
+    ViewBag.Title = "View";
+}
+
+<a href="/Ticket/List">Go back to list</a>
+<br />
+<a href="/Ticket/Edit/@Model.TicketId">Update</a>
+<br />
+<h3><strong>@Model.EventName</strong></h3>
+<h4><strong>Ticket Id: </strong>@Model.TicketId</h4>
+<h4><strong>Website Id: </strong>@Model.WebsiteId</h4>
+<h4><strong>Event Type: </strong>@Model.EventType</h4>
+<h4><strong>Venue: </strong> @Model.EventVenue</h4>
+<h4><strong>Location: </strong> @Model.EventLocation</h4>
+<h4><strong>Date: </strong>@Model.EventDate</h4>
+<h4><strong>Starting Price: </strong>@Model.TicketStartingPrice</h4>
+
+
+

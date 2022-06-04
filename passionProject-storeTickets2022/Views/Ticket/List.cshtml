@@ -1,0 +1,15 @@
+﻿@model IEnumerable<passionProject_storeTickets2022.Models.TicketDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/Ticket/New">Add New Ticket</a>
+@foreach (var ticket in Model)
+{
+    <h3><a href="/Ticket/Details/@ticket.TicketId">@ticket.EventName</a></h3>
+    <h4><strong>Date: </strong>@ticket.EventDate</h4>
+    <h4><strong>Location: </strong>@ticket.EventLocation</h4>
+
+
+}

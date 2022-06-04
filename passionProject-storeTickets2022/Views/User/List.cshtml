@@ -1,0 +1,16 @@
+﻿@model IEnumerable<passionProject_storeTickets2022.Models.User>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/User/New">Add New User</a>
+@foreach(var user in Model)
+{
+    <h3><a href="/User/Details/@user.UserId">@user.UserFirstName @user.UserLastName</a></h3>
+    <h4><strong>User ID Name: </strong>@user.UserName</h4>
+    //<h4>Phone: @user.PhoneNnumber</h4>
+    //<h4>Email: @user.EmailAddress</h4>
+    //<h4>Date of Birth: @user.BirthDate</h4>
+    
+}

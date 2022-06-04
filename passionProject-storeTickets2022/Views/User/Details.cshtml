@@ -1,0 +1,16 @@
+﻿@model passionProject_storeTickets2022.Models.User
+@{
+    ViewBag.Title = "View";
+}
+
+<a href="/User/List">Go back to list</a>
+<br />
+<a href="/User/Edit/@Model.UserId">Update</a>
+<br />
+<a style="color:#ab2020;" href="/User/DeleteConfirm/@Model.UserId">Delete</a>
+<h3><strong>@Model.UserFirstName @Model.UserLastName</strong></h3>
+<h4><strong>Account ID: </strong>@Model.UserName</h4>
+<h4><strong>Phone: </strong> @Model.PhoneNnumber</h4>
+<h4><strong>Email: </strong> @Model.EmailAddress</h4>
+<h4><strong>Date of Birth: </strong>@Model.BirthDate</h4>
+
